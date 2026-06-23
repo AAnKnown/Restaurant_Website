@@ -1,0 +1,94 @@
+/* --- Hero Section --- */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('../Assets/Images/res6.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Προσαρμόζεται το μέγεθος ανάλογα με την οθόνη */
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d4af3788;
+    transform: translateY(-3px); /* Μικρό εφέ ανύψωσης */
+}
+
+/* --- Section Containers --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+/* --- Steps Grid (Πώς λειτουργεί) --- */
+.steps-grid {
+    display: flex;
+    flex-wrap: wrap; /* Για να "σπάει" σε κινητά */
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step {
+    flex: 1;
+    min-width: 250px; /* Για να μην γίνονται πολύ στενά */
+    padding: 30px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.step:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* --- About Brief Section --- */
+.about-brief {
+    background: #f1f1f1;
+    padding: 60px 0;
+}
+
+.about-brief p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    color: #555;
+}

@@ -1,0 +1,134 @@
+/* --- 1. Μεταβλητές & Γενικές Ρυθμίσεις --- */
+:root {
+    /* Ορίζουμε "μεταβλητές" για τα χρώματα ώστε να τα αλλάζουμε εύκολα σε όλο το site από εδώ */
+    --primary-color: #d4af37; /* Το χρυσό χρώμα για έμφαση */
+    --bg-dark: #1a1a1a;       /* Σκούρο γκρι/μαύρο για το μενού και το footer */
+    --text-light: #f4f4f4;    /* Σχεδόν άσπρο για τα κείμενα σε σκούρο φόντο */
+}
+
+body {
+    margin: 0;                /* Αφαιρεί τα προεπιλεγμένα κενά του browser στις άκρες */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;         /* Δίνει απόσταση ανάμεσα στις γραμμές κειμένου για ευανάγνωστο αποτέλεσμα */
+    background-color: #f9f9f9; /* Ελαφρύ γκρι φόντο για όλη τη σελίδα */
+}
+
+/* --- 2. Header & Menu Πλοήγησης --- */
+header {
+    background: var(--bg-dark); /* Χρήση της μεταβλητής που ορίσαμε πάνω */
+    color: white;
+    padding: 1rem 5%;          /* 1rem κενό πάνω-κάτω, 5% κενό δεξιά-αριστερά */
+    display: flex;             /* Ενεργοποιεί το Flexbox για εύκολη στοίχιση */
+    justify-content: space-between; /* Σπρώχνει το λογότυπο αριστερά και το μενού δεξιά */
+    align-items: center;       /* Κεντράρει τα στοιχεία κάθετα */
+    position: sticky;          /* Το μενού "κολλάει" στην κορυφή καθώς σκρολάρουμε */
+    top: 0;
+    z-index: 1000;             /* Εξασφαλίζει ότι το μενού θα είναι πάντα πάνω από άλλα στοιχεία */
+}
+
+.logo h2 span { 
+    color: var(--primary-color); /* Κάνει το "Resto" χρυσό στο λογότυπο */
+}
+
+nav ul {
+    list-style: none;          /* Αφαιρεί τις τελείες από τη λίστα του μενού */
+    display: flex;             /* Βάζει τα στοιχεία του μενού το ένα δίπλα στο άλλο */
+    margin: 0;
+}
+
+nav ul li { 
+    margin-left: 20px;         /* Δίνει απόσταση μεταξύ των επιλογών του μενού */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;     /* Αφαιρεί την υπογράμμιση από τα links */
+    font-weight: 500;
+    transition: 0.3s;          /* Κάνει την αλλαγή χρώματος ομαλή (animation) */
+}
+
+nav ul li a:hover { 
+    color: var(--primary-color); /* Το link γίνεται χρυσό όταν περνάει το ποντίκι από πάνω */
+}
+
+.btn-auth {
+    background: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 5px;        /* Στρογγυλεύει τις γωνίες του κουμπιού */
+    color: black !important;   /* Επιβάλλει μαύρο χρώμα γράμματα στο κουμπί */
+}
+
+/* --- 3. Hero Section (Η μεγάλη εικόνα στην Αρχική) --- */
+.hero {
+    height: 80vh;              /* Καταλαμβάνει το 80% του ύψους της οθόνης */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200'); 
+    /* Το linear-gradient βάζει ένα σκοτεινό "πέπλο" πάνω από την εικόνα για να φαίνονται τα λευκά γράμματα */
+    background-size: cover;    /* Η εικόνα καλύπτει όλο τον διαθέσιμο χώρο χωρίς να παραμορφώνεται */
+    background-position: center;
+    display: flex;
+    justify-content: center;   /* Κεντράρει το κείμενο οριζόντια */
+    align-items: center;       /* Κεντράρει το κείμενο κάθετα */
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 { 
+    font-size: 3.5rem;         /* Πολύ μεγάλα γράμματα για τον κεντρικό τίτλο */
+    margin-bottom: 1rem; 
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* --- 4. Ενότητες Περιεχομένου (Containers & Steps) --- */
+.container { 
+    width: 80%;                /* Το περιεχόμενο δεν πιάνει όλη την οθόνη, αφήνει περιθώρια */
+    margin: 50px auto;         /* 50px κενό πάνω-κάτω και "auto" για να κεντραριστεί οριζόντια */
+    text-align: center; 
+}
+
+.steps-grid {
+    display: flex;             /* Βάζει τα 3 βήματα (cards) το ένα δίπλα στο άλλο */
+    justify-content: space-between; 
+    gap: 20px;                 /* Κενό ανάμεσα στις κάρτες */
+    margin-top: 40px;
+}
+
+.step {
+    flex: 1;                   /* Κάνει όλες τις κάρτες να έχουν το ίδιο πλάτος */
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Δίνει ένα ελαφρύ σκιώδες βάθος στις κάρτες */
+    border-radius: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: black;
+    border-radius: 50%;        /* Κάνει το πλαίσιο του αριθμού τέλειο κύκλο */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;       /* Κεντράρει τον κύκλο οριζόντια */
+    font-weight: bold;
+}
+
+/* --- 5. Footer (Το κάτω μέρος) --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-dark);
+    color: white;
+    margin-top: auto;          /* Σπρώχνει το footer στο τέλος της σελίδας αν το περιεχόμενο είναι λίγο */
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κράτηση Τραπεζιού - GourmetResto</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/dome.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h2>The-Glass<span>Dome</span></h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Αρχική</a></li>
+            <li><a href="gallery.html">Φωτογραφίες</a></li>
+            <li><a href="app.html">Εφαρμογή</a></li>
+            <li><a href="offers.html">Ανακοινώσεις</a></li>
+            <li><a href="contact.html">Επικοινωνία</a></li>
+            <li id="auth-nav"><a href="auth.html" class="btn-auth">Είσοδος</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="app-container">
+    <section class="booking-header">
+        <h1>Κράτηση Τραπεζιού</h1>
+        <p>Επιλέξτε ημερομηνία και ώρα για να δείτε τη διαθεσιμότητα.</p>
+    </section>
+
+<section class="booking-filters">
+    <div class="filter-group">
+        <label for="resDate"><i class="icon-calendar"></i> Ημερομηνία</label>
+        <input type="date" id="resDate" required>
+    </div>
+    <div class="filter-group">
+        <label for="resTime"><i class="icon-clock"></i> Ώρα Προσέλευσης</label>
+        <select id="resTime">
+            <option value="18:00:00">18:00 </option>
+            <option value="19:00:00">19:00</option>
+            <option value="20:00:00">20:00</option>
+            <option value="21:00:00">21:00</option>
+            <option value="22:00:00">22:00</option>
+        </select>
+    </div>
+    <button onclick="fetchTables()" class="btn-auth">Αναζήτηση</button>
+</section>
+
+    <div class="restaurant-floor" id="tableContainer">
+        <p style="grid-column: 1/-1; color: #666;">Παρακαλώ επιλέξτε ημερομηνία και πατήστε "Έλεγχος Διαθεσιμότητας".</p>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item"><span class="box available"></span> Διαθέσιμο</div>
+        <div class="legend-item"><span class="box occupied"></span> Κατειλημμένο</div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Project Restaurant Website Θ.Π.Δ Κωνσταντίνος Μπουρμπάκης ΤΠ4881</p>
+</footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

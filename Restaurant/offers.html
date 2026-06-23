@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Προσφορές & Ανακοινώσεις - TheGlassDome</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/dome.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/offers.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h2>The-Glass<span>Dome</span></h2>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Αρχική</a></li>
+            <li><a href="gallery.html">Φωτογραφίες</a></li>
+            <li><a href="app.html">Εφαρμογή</a></li>
+            <li><a href="offers.html">Ανακοινώσεις</a></li>
+            <li><a href="contact.html">Επικοινωνία</a></li>
+            <li id="auth-nav"><a href="auth.html" class="btn-auth">Είσοδος</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <h1>Ειδικές Προσφορές</h1>
+    
+    <section id="admin-section" style="display: none; border: 2px solid #d4af37; padding: 20px; margin-bottom: 30px; border-radius: 10px;">
+        <h3>Προσθήκη Νέας Ανακοίνωσης (Admin Only)</h3>
+        <form id="offerForm">
+            <input type="text" id="offerTitle" placeholder="Τίτλος Προσφοράς" required>
+            <textarea id="offerDesc" placeholder="Περιγραφή Προσφοράς" required></textarea>
+            <button type="submit" class="btn-auth">Δημοσίευση</button>
+        </form>
+    </section>
+
+    <div id="offersList" class="offers-grid">
+        </div>
+</main>
+
+<script src="js/auth.js"></script>
+<script src="js/offers.js"></script>
+</body>
+</html>

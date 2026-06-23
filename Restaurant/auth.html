@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Είσοδος / Εγγραφή - TheGlassDome</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/dome.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <main class="container">
+        <div class="contact-wrapper">
+            <div class="auth-toggle">
+                <button id="loginBtn" class="active-tab" onclick="showForm('login')">Είσοδος</button>
+                <button id="registerBtn" onclick="showForm('register')">Εγγραφή</button>
+            </div>
+
+            <form id="loginForm" class="standard-form">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Κωδικός Πρόσβασης</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit" class="btn-auth">Σύνδεση</button>
+            </form>
+
+            <form id="registerForm" class="standard-form hidden">
+                <div class="form-group">
+                    <label>Ονοματεπώνυμο</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Δημιουργία Κωδικού</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit" class="btn-auth">Δημιουργία Λογαριασμού</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="JS/auth.js"></script>
+    
+</body>
+</html>

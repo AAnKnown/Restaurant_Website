@@ -1,0 +1,22 @@
+.auth-toggle { 
+    margin-bottom: 20px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; }
+        
+.auth-toggle button { 
+    cursor: pointer; 
+    background: none; 
+    border: none; 
+    font-size: 1.1rem; 
+    padding: 5px 10px; 
+}
+
+.active-tab { 
+    border-bottom: 2px solid var(--primary-color) !important; 
+    font-weight: bold; 
+}
+
+.hidden { 
+    display: none; 
+}

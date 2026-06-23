@@ -1,0 +1,166 @@
+/* --- Γενικές Ρυθμίσεις --- */
+:root {
+    --primary-color: #d4af37; /* Χρυσό */
+    --bg-dark: #1a1a1a;       /* Μαύρο/Ανθρακί */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box; /* Για να μην επηρεάζουν τα paddings το συνολικό πλάτος */
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Το footer να μένει πάντα κάτω */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--bg-dark);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.logo h2 span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Το ειδικό στυλ για το κουμπί Είσοδος/Εγγραφή */
+.btn-auth {
+    background: var(--primary-color);
+    padding: 8px 18px;
+    border-radius: 5px;
+    color: black !important;
+    font-weight: bold;
+}
+
+.btn-auth:hover {
+    background: #d4af3788
+}
+
+/* Το κοντέινερ που περιέχει όλα τα τραπέζια */
+#tableContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Αυτόματο γέμισμα */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* Κεντράρισμα στη σελίδα */
+}
+
+/* Το κύριο κουτί του τραπεζιού */
+.table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Μοιράζει το περιεχόμενο πάνω-κάτω */
+    padding: 15px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 140px; /* Σταθερό ύψος για ομοιομορφία */
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Κρύβει οτιδήποτε περισσεύει */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Ο αριθμός του τραπεζιού (μεγάλος) */
+.table-id {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+    margin: 2px 0;
+}
+
+/* Η λέξη "Τραπέζι" (μικρή) */
+.table-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+/* Το κουτάκι της χωρητικότητας */
+.table-cap-box {
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.15); /* Ελαφρύ σκούρο φόντο για αντίθεση */
+    padding: 2px 8px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.table-capacity {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Εφέ στο hover για τα διαθέσιμα */
+.table.available:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.1);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Χρώματα */
+.available { 
+    background-color: #2ecc71;
+    border: 2px solid #2ecc71; 
+} /* Πράσινο */
+.occupied { 
+    background-color: #e74c3c; 
+    border: 2px solid #e74c3c;
+    opacity: 0.9;
+    cursor: not-allowed; 
+} /* Κόκκινο */
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-dark);
+    color: white;
+    margin-top: auto;
+}

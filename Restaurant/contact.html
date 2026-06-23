@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <title>Επικοινωνία - TheGlassDome</title>
+    <link rel="icon" type="image/x-icon" href="Assets/Images/dome.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+    <main class="container">
+        <section class="contact-section">
+            <h1>Επικοινωνήστε μαζί μας</h1>
+            <p>Έχετε ερωτήσεις; Συμπληρώστε τη φόρμα και θα σας απαντήσουμε το συντομότερο.</p>
+
+            <div class="contact-wrapper">
+                <form id="contactForm" class="standard-form">
+                    <div class="form-group">
+                        <label for="name">Ονοματεπώνυμο</label>
+                        <input type="text" id="name" required placeholder="π.χ. Γιώργος Παπαδόπουλος">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Θέμα</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Μήνυμα</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-auth">Αποστολή Μηνύματος</button>
+                </form>
+
+                <div id="successMessage" class="success-box" style="display:none;">
+                    <h3>Ευχαριστούμε!</h3>
+                    <p>Το μήνυμά σας στάλθηκε με επιτυχία. Ένα αντίγραφο στάλθηκε στο email σας.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="JS/contact.js"></script>
+
+</body>
+</html>
